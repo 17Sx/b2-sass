@@ -17,7 +17,6 @@
 }
 
 @mixin card($bg-color, $text-color, $border-radius, $padding) {
-    height: 52vh;
     background-color: $bg-color;
     color: $text-color;
     border-radius: $border-radius;

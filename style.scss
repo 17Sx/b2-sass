@@ -110,7 +110,7 @@
 
                 &-1{
                     @include m.button(v.$transparent, v.$black, v.$large-radius, v.$padding);
-                    border: 1px solid v.$black;
+                    border: 2px solid v.$dark-blue;
                     width: 10vw;
                     display: flex;
                     align-items: center;
@@ -232,12 +232,162 @@
                 color: v.$black;
                 margin-bottom: v.$margin-2x;
             }
+
+            &-containerbtn{
+                display: flex;
+                justify-content: right;
+    
+                &-button{
+                    @include m.button(v.$dark-blue, v.$white, v.$large-radius, v.$padding);
+                    width: 10vw;
+
+                    &-1{
+                        @include m.button(v.$transparent, v.$black, v.$large-radius, v.$padding);
+                        border: 2px solid v.$dark-blue;
+                        width: 10vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 10px;
+        
+                        & img{
+                            margin-left: 5px;
+                            border: 1px solid v.$dark-blue;
+                            border-radius: v.$large-radius;
+                        }
+                    }
+
+                    
+                }
+            }
         }
 
         & img{
             object-fit: cover;
         }
-
-
     }
+
+    &__info{
+        margin-top: v.$margin-4x;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+
+            &-button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include m.button(v.$transparent, v.$black, v.$large-radius, v.$padding);
+                border: 1px solid v.$black;
+                width: 10vw;    
+            }
+        }
+
+        &-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 10vh;
+            gap: 10px;
+
+            &-card{
+                @include m.card(v.$white, v.$black, v.$small-radius, v.$padding);
+                width: 26vw;
+                transition: 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                transition: 0.3s ease;
+
+                &:hover{
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                }
+
+                &-text{
+                    &-title{
+                        margin-top: v.$margin;
+                        display: flex;
+                        justify-content: center;
+                        padding: v.$small-padding;
+                        font-size:0.8rem;
+                        font-weight: v.$font-weight-bold;
+                        color: v.$white;
+                        background-color: v.$blue;
+                        width: 30%;
+                        border-radius: v.$large-radius;
+                    }
+
+                    &-subtitle{
+                        margin-top: v.$margin;
+                        font-size: 1rem;
+                        font-weight: v.$font-weight-bold;
+                        color: v.$dark-blue;
+                        margin-bottom: v.$small-margin;
+                    }
+                }
+            
+            }
+        }
+    }
+
+
+    &__footer{
+        margin-top: v.$margin-4x;
+        display: flex;
+        flex-direction: column;
+        background-color: v.$yellow;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 10vh;
+
+        &-input{
+            justify-content: space-between;
+            background-color: v.$dark-blue;
+            color: v.$white;
+            padding: v.$padding;
+            border-radius: v.$small-radius;
+            display: flex;
+            width: 80%;
+
+            &-title{
+                font-size: 2rem;
+                font-weight: v.$font-weight-bold;
+                margin-right: v.$margin;
+            }
+
+            &-container{
+                background-color: v.$white;
+                display: flex;
+                width: 80%;
+                justify-content: flex-end;
+                align-items: center;
+                border-radius: v.$small-radius;
+
+                & input{
+                    border: 2px solid v.$light-black;
+                    margin-left: 8px;
+                    width: 85%;
+                    height: 70%;
+                    padding: 5px;
+                    outline: none;
+                    border-radius: v.$small-radius;
+
+                    &::placeholder{
+                        margin-left: v.$margin;
+                    }
+                }
+
+                    &-button{
+                        @include m.button(v.$dark-blue, v.$white, v.$small-radius, v.$padding);
+                        height: 70%;
+                        margin: 0 10px 0 10px;
+                    }
+                
+            }
+        }
+    }
+
 }
