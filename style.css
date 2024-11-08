@@ -433,5 +433,40 @@ li {
   height: 70%;
   margin: 0 10px 0 10px;
 }
+.main__footer-info {
+  color: #003459;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 10vh;
+  border-bottom: 2px solid #667479;
+}
+.main__footer-info-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+.main__footer-info-btn-link {
+  font-size: x-large;
+  font-weight: 800;
+}
+.main__footer-info-social {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  font-size: x-large;
+}
+.main__footer-legal {
+  color: #003459;
+  width: 80%;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__footer-legal-logo {
+  height: 10vh;
+}
 
 /*# sourceMappingURL=style.css.map */

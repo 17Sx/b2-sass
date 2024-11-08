@@ -388,6 +388,51 @@
                 
             }
         }
+        
+        &-info{
+            color: v.$dark-blue;
+            margin-top: v.$margin-2x;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            height: 10vh;
+            border-bottom: 2px solid v.$light-black;
+
+            &-btn{
+                display: flex;
+                justify-content: space-between;
+                width: 30%;
+
+                &-link{
+                    font-size: x-large;
+                    font-weight: v.$font-weight-bold;
+                }
+            }
+
+            &-social{
+                display: flex;
+                justify-content: space-between;
+                width: 30%;
+                font-size:x-large;
+            }
+        }
+
+        &-legal{
+        
+            color: v.$dark-blue;
+            width: 80%;
+            margin-top: v.$margin-4x;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-logo{
+                height: 10vh;
+            }
+        }
     }
 
 }
+
+
+
