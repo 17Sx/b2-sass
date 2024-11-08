@@ -1,11 +1,243 @@
 @use "var" as v;
 @use "mixin" as m;
+@use "base";
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: v.$font-family;
+.header{
+    background-color: v.$yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    &__img{
+        margin-left: v.$margin-4x;
+        width: 130px;
+        height: 40px;
+
+    }
+
+    &__nav{
+
+        width: 80vh;
+
+        &-list{
+            font-weight: v.$font-weight-bold;
+            color: v.$dark-blue;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: v.$padding-4x;
+        }
+    }
+
+    &__bubble{
+
+        margin-right: v.$margin-4x;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-input{
+            margin-right: v.$margin;
+            padding: v.$padding;
+            border-radius: v.$large-radius;
+            background-color: v.$white;
+
+            & input{
+                border: none;
+                outline: none;
+                margin-left: v.$margin;
+            }
+        }
+
+        &-link{
+            @include m.button(v.$dark-blue, v.$white, v.$large-radius, v.$padding);
+        }
+    }       
+    
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 5vh;
+        height: 100%;
+        width: 100%;
+        background-color: v.$yellow;
+        padding: 0 0 0 10vh;
+        
+        &-left{
+            margin-top: 5vh;
+            display: flex;
+            flex-direction: column;
+
+            &-title{
+                font-size: 4rem;
+                font-weight: v.$font-weight-bold;
+                color: v.$dark-blue;
+            }   
+
+            &-subtitle{
+                font-size: 1.5rem;
+                font-weight: v.$font-weight-bold;
+                color: v.$dark-blue;
+                margin-bottom: v.$margin-2x;
+            }
+
+            &-description{
+                font-size: 0.8rem;
+                font-weight: v.$font-weight-bold;
+                color: v.$black;
+                margin-bottom: v.$margin-2x;
+            }
+
+        &-containerbtn{
+
+            display: flex;
+
+            &-button{
+                @include m.button(v.$dark-blue, v.$white, v.$large-radius, v.$padding);
+                width: 10vw;
+            
+
+                &-1{
+                    @include m.button(v.$transparent, v.$black, v.$large-radius, v.$padding);
+                    border: 1px solid v.$black;
+                    width: 10vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 10px;
+    
+
+                    & img{
+                        margin-left: 5px;
+                        border: 1px solid v.$dark-blue;
+                        border-radius: v.$large-radius;
+                    }
+                }
+            }
+        }
+
+        }
+    }
+
+    .dog{
+            width: 60%; 
+            height: 100vh; 
+            object-fit: cover;
+            margin-top: -5vh;
+    }
+
+    &__pets{
+        width: 100%;
+        padding: 0 10vw 0 10vw;
+
+        &-header{
+            display: flex;
+            justify-content: space-between;
+
+            &-button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include m.button(v.$transparent, v.$black, v.$large-radius, v.$padding);
+                border: 1px solid v.$black;
+                width: 10vw;    
+            }
+        }
+
+        &-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 10vh;
+            gap: 10px;
+
+            &-card{
+                @include m.card(v.$white, v.$black, v.$small-radius, v.$padding);
+                transition: 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                
+                & img{
+                    border-radius: v.$small-radius;
+                    width: 17vw;
+                    height: 70%;
+                    object-fit: cover;
+
+                    &:hover{
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                    }
+                }
+            
+
+                    &-title{
+                        margin-top: 2vh;
+                        font-size: 1rem;
+                        font-weight: v.$font-weight-bold;
+                        margin-bottom: v.$small-margin;
+                    }
+
+                    &-info {
+                        color: v.$light-black;
+                        margin-bottom: v.$small-margin;
+                    }
+
+                    &-price{
+                        font-weight: v.$font-weight-bold;   
+                        color: v.$black;
+                }
+            }
+        }
+    }
+
+    &__cta{
+        display: flex;
+        align-items: center;
+        margin-top: v.$margin-4x;
+        width: 80%;
+        background-color: v.$yellow;
+        border-radius: v.$small-radius;
+
+        &-text{
+            margin-right: v.$margin-4x;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+
+            &-title{
+                font-size: 3rem;
+                font-weight: v.$font-weight-bold;
+                color: v.$dark-blue;
+            }
+
+            &-subtitle{
+                font-size: 1.5rem;
+                font-weight: v.$font-weight-bold;
+                color: v.$dark-blue;
+                margin-bottom: v.$margin-2x;
+            }
+
+            &-description{
+                font-size: 0.9rem;
+                font-weight: v.$font-weight-bold;
+                color: v.$black;
+                margin-bottom: v.$margin-2x;
+            }
+        }
+
+        & img{
+            object-fit: cover;
+        }
+
+
+    }
+}

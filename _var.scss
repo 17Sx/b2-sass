@@ -3,7 +3,39 @@
 $dark-blue: #003459;
 $yellow:#F7DBA7;
 $black:#00171F;
+$white:#FFFFFF;
+$transparent: transparent;
+$light-black:#667479;
 
 //Font 
 
+@font-face {
+    font-family: 'Gilroy';
+    src:
+    url('../fonts/Gilroy-Regular.ttf') format('truetype');
+}
+
 $font-family: 'Gilroy';
+$font-size: 1rem;
+$font-weight: 100;
+$font-weight-bold: 800;
+
+//Padding
+
+$padding: 1rem;
+$padding-2x: 2rem;
+$padding-3x: 3rem;
+$padding-4x: 4rem;
+
+//Margin
+
+$small-margin: 0.5rem;
+$margin: 1rem;
+$margin-2x: 2rem;
+$margin-3x: 3rem;
+$margin-4x: 4rem;
+
+//Border radius
+
+$small-radius: 10px;
+$large-radius: 50px;

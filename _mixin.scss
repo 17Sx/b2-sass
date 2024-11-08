@@ -1,0 +1,27 @@
+@use "var" as v;
+
+
+@mixin button($bg-color, $text-color, $border-radius, $padding) {
+    width: 35vh;
+    display: inline-block;
+    padding: $padding;
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    border-radius: $border-radius;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@mixin card($bg-color, $text-color, $border-radius, $padding) {
+    height: 52vh;
+    background-color: $bg-color;
+    color: $text-color;
+    border-radius: $border-radius;
+    padding: $padding;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
