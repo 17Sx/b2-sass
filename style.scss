@@ -1,0 +1,11 @@
+@use "var" as v;
+@use "mixin" as m;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: v.$font-family;
+}
+
